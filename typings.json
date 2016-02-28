@@ -1,0 +1,6 @@
+{
+  "ambientDependencies": {},
+  "dependencies": {
+    "request": "github:louy/typed-request#e988b564dc3f4e1d633fad3d72aadd7f2326879a"
+  }
+}
