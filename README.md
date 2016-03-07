@@ -25,6 +25,7 @@ C | c, C
 C++11 | c++, C++, cpp, CPP
 Java | java, JAVA
 Python3 | py, PY
+Pascal | pascal, pas, p
 
 **Submit problem**
 

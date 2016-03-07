@@ -76,7 +76,10 @@ export class Controller implements vscode.Disposable {
             'c++': Language.CPP11,
             'cpp': Language.CPP11,
             'java': Language.JAVA,
-            'py': Language.PYTHON3
+            'py': Language.PYTHON3,
+            'pascal': Language.PASCAL,
+            'pas': Language.PASCAL,
+            'p': Language.PASCAL
         }
         let lang: Language = maps[extension];
         if (lang == undefined) {

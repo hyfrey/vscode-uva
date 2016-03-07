@@ -27,6 +27,9 @@ suite("Parse Problem Meta Tests", function () {
     }, {
         arg: { filePath: '/abc/def/   23 a 9 bc 8 .py', content: '' },
         expected: { problemNumber: '23', lang: Language.PYTHON3 }
+    }, {
+        arg: { filePath: '/abc/def/   23 a java bc 8 .pascal', content: '' },
+        expected: { problemNumber: '23', lang: Language.PASCAL }
     }]
 
     oks.forEach((e) => {
