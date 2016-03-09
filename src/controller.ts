@@ -180,6 +180,10 @@ export class Controller implements vscode.Disposable {
                                          Verdict[sub.verdictID],
                                          sub.rank);
                         }
+                        // workaround for AsciiTable doens't support empty row
+                        if (usersubs.length == 0) {
+                            table.addRow("","","","","","");
+                        }
                         this.outputChannel.append(table.toString());
                         this.outputChannel.appendLine("");
                         this.outputChannel.show();
