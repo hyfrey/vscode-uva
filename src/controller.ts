@@ -165,7 +165,9 @@ export class Controller implements vscode.Disposable {
                 this.uhuntclient.subsByNums([uid], [meta.problemNumber]).then(
                     (subs) => {
                         let usersubs = subs[uid];
-                        usersubs.reverse();
+                        usersubs.sort((a, b) => {
+                            return b.submissionTime - a.submissionTime;
+                        });
                         let table = new AsciiTable("UVa [" + meta.problemNumber + "] Status");
                         table.setHeading("Submission ID", "Language", "Runtime", "Submission Time", "Verdict", "Rank");
                         for (let i = 0; i < usersubs.length; ++i) {
